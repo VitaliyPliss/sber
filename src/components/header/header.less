@@ -1,0 +1,40 @@
+@import '@/assets/styles/helpers';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 40px;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+  }
+
+  &__divider {
+    width: 24px;
+    height: 23px;
+    margin: 0 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 24px;
+    border-radius: 22px;
+    background: @color-dark;
+    color: @color-white;
+    font-weight: 600;
+    line-height: 125%;
+  }
+}

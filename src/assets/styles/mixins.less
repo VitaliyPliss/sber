@@ -1,0 +1,71 @@
+.img(@name) {
+  background-image: url('../images/@{name}');
+}
+
+.cover() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contain() {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ellipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.square(@size) {
+  width: @size;
+  height: @size;
+}
+
+.no-scrollbar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.placeholder(@params) {
+  &::-webkit-input-placeholder {
+    @params();
+  }
+
+  &::-moz-placeholder {
+    @params();
+  }
+
+  &:-moz-placeholder {
+    @params();
+  }
+
+  &:-ms-input-placeholder {
+    @params();
+  }
+}
+
+.font(@family, @filename: @family, @weight: normal, @style: normal) {
+  @font-face {
+    font-family: @family;
+    src: url('@/assets/fonts/@{filename}.woff2') format('woff2'), url('@/assets/fonts/@{filename}.woff') format('woff');
+    font-weight: @weight;
+    font-style: @style;
+    font-display: swap;
+  }
+}
+
+.hover(@params) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @params();
+    }
+  }
+}
