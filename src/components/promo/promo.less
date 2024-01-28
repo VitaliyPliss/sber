@@ -31,7 +31,14 @@
     -webkit-text-fill-color: transparent;
   }
 
+  &__subtitles {
+    position: relative;
+  }
+
   &__subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 520px;
     margin-top: 72px;
     font-size: 48px;
@@ -47,6 +54,16 @@
     bottom: 0;
     right: 0;
     z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(270deg, white 0%, transparent 7%), linear-gradient(0deg, white 0%, transparent 7%), linear-gradient(180deg, white 0%, transparent 7%);
+    }
   }
 
   &__video {

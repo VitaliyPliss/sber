@@ -2,9 +2,9 @@
   <header class="header">
     <div class="container header__container">
       <div class="header__logos">
-        <img src="images/header/logo-sber.svg" class="header__logo" />
+        <img src="images/header/logo-sber.svg" class="header__logo header__logo_sber" />
         <div class="header__divider" style="background-image: url('images/header/divider.svg')" />
-        <img src="images/header/logo-mult.svg" class="header__logo" />
+        <img src="images/header/logo-mult.svg" class="header__logo header__logo_mult" />
       </div>
       <a href="#" class="header__link">Хочу стикер</a>
     </div>
